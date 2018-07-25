@@ -23,6 +23,10 @@ public class DownloadRunnable implements Runnable{
     private String url;
     //文件的名称
     private String name;
+
+    //线程个数
+    private int mThreadsize;
+
     //线程id
     private int threadId;
     //每个线程下载开始的位置
@@ -36,7 +40,7 @@ public class DownloadRunnable implements Runnable{
     private DownloadCallback downloadCallback;
 
     public DownloadRunnable(String name,String url,long currentLength,
-                            int threadId,long start,long end,DownloadCallback downloadCallback){
+                            int threadId,long start,long end,int threadsize,DownloadCallback downloadCallback){
         this.name = name;
         this.url = url;
         this.mCurrentLength = currentLength;
@@ -44,6 +48,7 @@ public class DownloadRunnable implements Runnable{
         this.start = start;
         this.end = end;
         this.downloadCallback =downloadCallback;
+        this.mThreadsize = threadsize;
     }
 
     @Override
@@ -53,18 +58,20 @@ public class DownloadRunnable implements Runnable{
         try{
             Response response = OkHttpManager.getInstance().syncResponse(url,start,end);
             Log.i(TAG,"fileName=" + name + " 每个线程负责下载的文件大小contentLength=" + (end - start + 1) +
-            " 开始位置start=" + start + " 结束位置end=" + end + " threadId=" + threadId);
+            " 开始位置start=" + start + " 结束位置end=" + end + " threadId=" + Thread.currentThread().getId());
             inputStream = response.body().byteStream();
+            long length1 = response.body().contentLength();
+            Log.d(TAG,String.valueOf(length1));
             //保存文件路径
             File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath(),name);
             randomAccessFile = new RandomAccessFile(file,"rwd");
-            //从哪里开始seek
+            //从哪里开始下载
             randomAccessFile.seek(start);
             int length;
             byte[] bytes = new byte[10 * 1024];
             //读取下载文件并保存，遇到文件尾结束
-            while((length = inputStream.read(bytes)) != -1){
-                Log.d(TAG,"读取文件长度为"+String.valueOf(length)+",线程ID为："+threadId+"文件名为："+name);
+            while(((length = inputStream.read(bytes)) != -1) ){
+               // Log.d(TAG,"读取文件长度为"+String.valueOf(mProgress)+",线程ID为："+threadId+"文件名为："+name);
                 if(mStatus == STATUS_STOP){
                     downloadCallback.onPause(length,mCurrentLength);
                     break;
@@ -74,7 +81,7 @@ public class DownloadRunnable implements Runnable{
                 //保存进度，断点待实现 todo
                 mProgress = mProgress +length;
                 //实时更新进度条，将每次写入的length传出去
-                downloadCallback.onProgress(length,mCurrentLength);
+                downloadCallback.onProgress(length,mCurrentLength * mThreadsize);
             }
             downloadCallback.onSuccess(file);
         }catch (IOException e){

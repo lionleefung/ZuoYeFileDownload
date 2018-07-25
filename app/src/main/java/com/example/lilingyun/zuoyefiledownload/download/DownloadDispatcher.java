@@ -29,11 +29,9 @@ public class DownloadDispatcher {
     private final Deque<DownloadTask> runningTasks = new ArrayDeque<>();
 
 
-    private DownloadDispatcher(){
+    private DownloadDispatcher(){ }
 
-    }
-
-    public static  DownloadDispatcher getInstance(){   //如果有新任务则
+    public static  DownloadDispatcher getInstance(){   //如果有新任务则判断
         if(sDownloadDispatcher == null){
             synchronized (DownloadDispatcher.class){
                 if(sDownloadDispatcher == null){
@@ -88,7 +86,7 @@ public class DownloadDispatcher {
                 if(contentLength <= -1){
                     return ;
                 }
-                DownloadTask downloadTask = new DownloadTask(name,url,THREAD_SIZE,contentLength,callback);
+                DownloadTask downloadTask = new DownloadTask(name,url,5,contentLength,callback);
                     downloadTask.init();
                     runningTasks.add(downloadTask);
             }

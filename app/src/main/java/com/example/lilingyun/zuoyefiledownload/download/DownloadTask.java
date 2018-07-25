@@ -39,7 +39,7 @@ public class DownloadTask {
         for(int i = 0;i < mThreadSize; i++){
             //初始化的时候，需要读取数据库
             //每个线程的下载大小threadSize
-            long threadSize = mContentLength / mThreadSize;
+            final long threadSize = mContentLength / mThreadSize;
             //开始下载的位置
             long start = i * threadSize;
             //结束下载的位置
@@ -47,7 +47,7 @@ public class DownloadTask {
             if(i == mThreadSize - 1 ){
                 end = mContentLength - 1;
             }
-            DownloadRunnable downloadRunnable = new DownloadRunnable(name, url, mContentLength, i, start, end, new DownloadCallback() {
+            DownloadRunnable downloadRunnable = new DownloadRunnable(name, url, mContentLength, i, start, end,mThreadSize,new DownloadCallback() {
                 @Override
                 public void onSuccess(File file) {
                     mSuccessNumber = mSuccessNumber + 1;
@@ -71,7 +71,7 @@ public class DownloadTask {
                     //叠加下progress,实时更新进度条
                     //这里需要synchronized下
                     synchronized (DownloadTask.this){
-                        mTotalProgress = mTotalProgress + progress;
+                        mTotalProgress = (mTotalProgress + progress) ;
                         mDownloadCallback.onProgress(mTotalProgress,currentLength);
                     }
                 }
@@ -79,7 +79,6 @@ public class DownloadTask {
                 @Override
                 public void onPause(long progress, long currentLength) {
                     mDownloadCallback.onPause(progress,currentLength);
-
                 }
             });
             DownloadDispatcher.getInstance().executorService().execute(downloadRunnable);
@@ -93,6 +92,10 @@ public class DownloadTask {
     }
     public String getUrl(){
         return url;
+    }
+
+    public int getmThreadSize(){
+        return mThreadSize;
     }
 }
 

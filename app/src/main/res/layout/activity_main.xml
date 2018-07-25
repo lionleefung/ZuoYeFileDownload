@@ -24,7 +24,7 @@
                 android:layout_height="48dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="59dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:orientation="vertical">
@@ -32,14 +32,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="QQ"
-                    android:textColor="#000"/>
+                    android:text="Oicq"
+                    android:textColor="#000" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="大小: 46.3MB 版本: 7.5.8 下载次数: 26.2亿"
-                    android:textSize="12sp"/>
 
             </LinearLayout>
 
@@ -50,12 +45,10 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="122dp"
             app:innerCircleColor="@color/colorPrimary"
-            app:outCircleColor="@color/colorAccent"/>
+            app:outCircleColor="@color/colorAccent" />
     </RelativeLayout>
 
     <View
@@ -87,14 +80,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="微信"
+                    android:text="Pink Gum"
                     android:textColor="#000"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="大小: 58.5MB 版本: 6.6.6 下载次数: 31.9亿"
-                    android:textSize="12sp"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -104,10 +92,8 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="122dp" />
     </RelativeLayout>
 
     <View
@@ -140,14 +126,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="QQ空间"
+                    android:text="Pc Zone"
                     android:textColor="#000"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="大小: 29.3MB 版本: 7.8.1.288 下载次数: 3.7亿"
-                    android:textSize="12sp"/>
 
             </LinearLayout>
 
@@ -159,10 +140,8 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="122dp" />
     </RelativeLayout>
 
     <View
@@ -193,30 +172,24 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="QQ"
+                    android:text="Hezisi"
                     android:textColor="#000"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="大小: 46.3MB 版本: 7.5.8 下载次数: 26.2亿"
-                    android:textSize="12sp"/>
+
 
             </LinearLayout>
 
         </LinearLayout>
 
         <com.example.lilingyun.zuoyefiledownload.myprogressbar.MyProgressbar
-            android:id="@+id/qq_pb1"
+            android:id="@+id/hezisi"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="123dp"
             app:innerCircleColor="@color/colorPrimary"
-            app:outCircleColor="@color/colorAccent"/>
+            app:outCircleColor="@color/colorAccent" />
     </RelativeLayout>
 
     <View
@@ -249,27 +222,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="微信"
+                    android:text="Yamadie"
                     android:textColor="#000"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="大小: 58.5MB 版本: 6.6.6 下载次数: 31.9亿"
-                    android:textSize="12sp"/>
 
             </LinearLayout>
         </LinearLayout>
 
         <com.example.lilingyun.zuoyefiledownload.myprogressbar.MyProgressbar
-            android:id="@+id/wechat_pb1"
+            android:id="@+id/yamadie"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="123dp" />
     </RelativeLayout>
 
     <View
@@ -302,27 +268,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="微信"
+                    android:text="Hehehe"
                     android:textColor="#000"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="大小: 58.5MB 版本: 6.6.6 下载次数: 31.9亿"
-                    android:textSize="12sp"/>
 
             </LinearLayout>
         </LinearLayout>
 
         <com.example.lilingyun.zuoyefiledownload.myprogressbar.MyProgressbar
-            android:id="@+id/wechat_pb2"
+            android:id="@+id/hehehe"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="122dp" />
     </RelativeLayout>
 
     <View
@@ -355,27 +313,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="微信"
+                    android:text="Guabeisi"
                     android:textColor="#000"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="大小: 58.5MB 版本: 6.6.6 下载次数: 31.9亿"
-                    android:textSize="12sp"/>
 
             </LinearLayout>
         </LinearLayout>
 
         <com.example.lilingyun.zuoyefiledownload.myprogressbar.MyProgressbar
-            android:id="@+id/wechat_pb3"
+            android:id="@+id/Guabeisi"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="122dp" />
     </RelativeLayout>
 
     <View
@@ -408,27 +359,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="微信"
+                    android:text="Ma Jia Jia"
                     android:textColor="#000"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="大小: 58.5MB 版本: 6.6.6 下载次数: 31.9亿"
-                    android:textSize="12sp"/>
+
 
             </LinearLayout>
         </LinearLayout>
 
         <com.example.lilingyun.zuoyefiledownload.myprogressbar.MyProgressbar
-            android:id="@+id/wechat_pb4"
+            android:id="@+id/majiajia"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="122dp" />
     </RelativeLayout>
 
     <View
@@ -462,27 +407,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="微信"
+                    android:text="Qu Mingzi"
                     android:textColor="#000"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="大小: 58.5MB 版本: 6.6.6 下载次数: 31.9亿"
-                    android:textSize="12sp"/>
+
 
             </LinearLayout>
         </LinearLayout>
 
         <com.example.lilingyun.zuoyefiledownload.myprogressbar.MyProgressbar
-            android:id="@+id/wechat_pb5"
+            android:id="@+id/qumingzi"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="122dp" />
     </RelativeLayout>
 
     <View
@@ -515,27 +454,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="微信"
+                    android:text="Gezidan"
                     android:textColor="#000"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="大小: 58.5MB 版本: 6.6.6 下载次数: 31.9亿"
-                    android:textSize="12sp"/>
 
             </LinearLayout>
         </LinearLayout>
 
         <com.example.lilingyun.zuoyefiledownload.myprogressbar.MyProgressbar
-            android:id="@+id/wechat_pb6"
+            android:id="@+id/gezidan"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="122dp" />
     </RelativeLayout>
 
     <View

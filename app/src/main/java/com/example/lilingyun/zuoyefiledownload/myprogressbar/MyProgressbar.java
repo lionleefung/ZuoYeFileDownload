@@ -24,6 +24,7 @@ public class MyProgressbar extends View {
     private int mInnerCircleWidth;
     private int mOutCircleWidth;
     private String text = "点我";
+    private String text1 = "完成";
 
     public MyProgressbar(Context context){
         this(context,null);
